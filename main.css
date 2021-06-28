@@ -1,0 +1,699 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rowdies", cursive;
+}
+/*
+.container{
+}*/
+
+.icons {
+    color: black;
+    font-size: 1.6rem;
+}
+
+.fixed-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    color: black;
+    position: fixed;
+    z-index: 1;
+    height: 0;
+}
+
+.fixed-container a {
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+}
+
+nav {
+    flex: 25%;
+    border-right: 1px solid rgb(253, 230, 230);
+    height: 100vh;
+    background: white;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+}
+
+.link-item {
+    margin: 0.3rem 3rem;
+    padding-right: 1rem;
+}
+
+.link-item:last-child{
+    padding-top: 5rem;
+}
+
+.link-item > a,
+.dropdown-more > a {
+    padding: 0.5rem 0.75rem;
+    border-radius: 2rem;
+    background: white;
+    transition: background 0.2s, color 0.2s;
+}
+
+.link-item:not(:first-child) span:last-child {
+    margin-left: 1rem;
+}
+
+.link-item a:hover {
+    background: rgb(255, 229, 229);
+    color: rgb(77, 77, 252);
+}
+.link-item a:hover > .icons {
+    color: rgb(77, 77, 252);
+}
+
+.dropdown-more {
+    position: relative;
+}
+
+.dropdown-more:hover > .dropdown-more-content {
+    display: block;
+}
+
+.dropdown-more-content {
+    border: 1px solid rgb(192, 186, 186);
+    background-color: white;
+    width: 12rem;
+    position: absolute;
+    bottom: 3rem;
+    display: none;
+    z-index: 2;
+}
+.dropdown-more-content .dropdown-more-item a {
+    font-size: 1rem;
+    padding: 1rem;
+    width: 10rem;
+    background: white;
+}
+
+.dropdown-more-content hr {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-more-content .dropdown-more-item a:hover {
+    background: rgb(255, 229, 229);
+}
+
+.link-item button {
+    font-family: "Rowdies";
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    width: 14rem;
+    background: rgb(147, 147, 253);
+    transition: background 0.2s;
+    color: white;
+}
+
+.link-item button:hover {
+    background: rgb(106, 106, 253);
+}
+
+.nav-profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.nav-profile-container:first-child {
+    flex-grow: 2;
+}
+
+.nav-profile-container:nth-child(2) {
+    flex-grow: 8;
+}
+
+.nav-profile-container:last-child {
+    flex-grow: 2;
+}
+
+.nav-profile-item img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+}
+
+.nav-profile-text-container:first-child {
+    font-size: 1rem;
+}
+
+.nav-profile-text-container div:last-child {
+    font-size: 1rem;
+    font-family: "Comic Sans MS";
+}
+
+.link-item > .nav-profile-container {
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    background: white;
+    transition: background 0.2s, color 0.2s;
+    cursor: pointer;
+}
+
+.link-item > .nav-profile-container:hover {
+    background: rgb(255, 229, 229);
+}
+
+section {
+    flex: 42.2%;
+}
+
+section .main-container {
+    background: white;
+    border-right: 1px solid rgb(253, 230, 230);
+    border-bottom: 1px solid rgb(253, 230, 230);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section .main-item {
+    padding: 0.7rem;
+}
+
+aside {
+    flex: 32.8%;
+}
+
+.right-container {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border-bottom: 1px solid rgb(253, 230, 230);*/
+    height: 3.4rem;
+}
+/*
+.right-item {
+}*/
+
+.right-container .right-item input {
+    background: rgb(241, 241, 241);
+    border: none;
+    border-radius: 2rem;
+    /*width:20rem;
+    height: 1rem;*/
+    height: 2.5rem;
+    width: 22rem;
+    padding: 0 2rem;
+    font-size: 1rem;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right-container .right-item input:focus {
+    outline: none;
+    background: white;
+    border: 1px solid blue;
+}
+
+.middle-area {
+    position: relative;
+    left: 25%;
+    top: 55px;
+    z-index: 0;
+    width: 42.15%;
+    border-right: 1px solid rgb(253, 230, 230);
+}
+
+.tweet-insert-item img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    margin: 0.5rem 0;
+    margin-left: 1rem;
+}
+
+.tweet-insert-item > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.tweet-insert-item:first-child > div > div:first-child {
+    flex-grow: 1;
+}
+
+.tweet-insert-item:first-child > div > div:last-child {
+    flex-grow: 11;
+}
+
+.tweet-insert-item:last-child > div > div:first-child {
+    flex-grow: 6;
+}
+
+.tweet-insert-item:last-child > div > div:last-child {
+    flex-grow: 6;
+}
+
+.tweet-insert-item:first-child:first-child textarea {
+    border: none;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    height: 2rem;
+    resize: none;
+    width: 90%;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tweet-insert-item:first-child:first-child textarea:focus {
+    outline: none;
+}
+
+.tweet-insert-item button {
+    font-family: "Rowdies";
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 2rem;
+    width: 6rem;
+    background: rgb(147, 147, 253);
+    transition: background 0.2s;
+    color: white;
+    float: right;
+    margin-right: 1rem;
+}
+
+.tweet-insert-item .icons {
+    font-size: 1.2rem;
+    color: rgb(77, 77, 252);
+}
+
+.tweet-insert-item span {
+    float: left;
+    padding: 0.25rem;
+}
+
+.tweet-insert-item span:first-child {
+    margin-left: 5rem;
+}
+
+.tweet-insert-item button:hover {
+    background: rgb(106, 106, 253);
+}
+
+.tweet-insert-container {
+    padding-bottom: 1rem;
+    border-bottom: 10px solid rgb(253, 230, 230);
+}
+
+.tweet-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweets-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.tweet-item {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(253, 230, 230);
+    transition: background 0.3s;
+}
+
+.tweet-item:hover {
+    background: rgb(252, 240, 240);
+}
+
+.tweet-left {
+    flex-grow: 2;
+    padding: 0.8rem;
+}
+
+.tweet-right {
+    flex-grow: 10;
+    padding-top: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.tweet-right-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tweet-right-item:nth-child(2) {
+    padding: 0 0 1rem 0;
+    font-family: "Lato", sans-serif;
+}
+.tweet-right-top-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tweet-right-top-item:first-child span:not(:first-child) {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tweet-right-top-item:first-child span:nth-child(3) {
+    margin-bottom: 0.5rem;
+}
+
+.tweet-right-top-item:last-child {
+    margin-top: -0.25rem;
+    margin-right: 1rem;
+}
+
+.tweet-left img {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+}
+
+.tweet-right-item img {
+    width: 100%;
+    border-radius: 5%;
+}
+
+.tweet-bottom-container {
+    margin-top: 0.1rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tweet-bottom-item {
+    flex-basis: 25%;
+}
+
+.tweet-bottom-item > span:nth-child(2) {
+    font-family: "Lato", sans-serif;
+}
+
+.tweet-bottom-item > span:first-child {
+    padding: 0.2rem;
+    background-color: white;
+    transition: background 0.2s;
+}
+
+.tweet-bottom-item > span:first-child:hover {
+    border-radius: 100%;
+    background-color: rgb(236, 236, 236);
+}
+
+.tweet-bottom-item .icons {
+    font-size: 1.2rem;
+}
+
+.right-area {
+    position: relative;
+    left: 67.2%;
+    top: -870px;
+    z-index: 0;
+    width: 32.5%;
+}
+
+.right-area-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    position: sticky;
+}
+
+.right-area-container .icons {
+    font-size: 1em;
+}
+
+.right-area-item > div {
+    padding: 0.5rem;
+}
+.gundem-content-header-item:first-child {
+    margin-top: 0.5rem;
+}
+
+.gundem-content-header-container {
+    background: rgb(255, 247, 247);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    padding-left: 0.5rem;
+    border-bottom: 1px solid rgb(252, 218, 218);
+    display: flex;
+}
+
+.gundem-content-header-item:first-child {
+    font-size: 1.2em;
+    margin-left: 0.5em;
+    margin-bottom: 0.25rem;
+}
+
+.gundem-content-header-item:last-child {
+    margin-left: auto;
+    align-self: center;
+}
+
+.gundem-content-body-container {
+    background: rgb(255, 247, 247);
+    padding-left: 0.5rem;
+    border-bottom: 1px solid rgb(252, 218, 218);
+    transition: background 0.25s;
+    cursor: pointer;
+}
+
+.gundem-content-body-container:hover {
+    background: rgb(252, 237, 237);
+}
+
+.gundem-content-body-item-first-line-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.gundem-content-body-item-first-line-container span:not(:last-child) {
+    font-size: 0.8em;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.gundem-content-body-item-first-line-container span:nth-child(2),
+.gundem-content-body-item-first-line-container span:nth-child(3) {
+    margin-left: 0.25rem;
+}
+
+.gundem-content-body-item {
+    margin-left: 0.75em;
+}
+
+.gundem-content-body-item:nth-child(2) > span {
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+}
+
+.gundem-content-body-item:nth-child(3) {
+    margin-top: 0.5em;
+}
+
+.gundem-content-body-item:nth-child(3) > span {
+    font-size: 0.75em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.gundem-content-body-item-first-line-container > span:nth-child(2) {
+    margin-top: -0.25rem;
+}
+
+.gundem-content-body-item-first-line-container > span:nth-child(4) {
+    margin-left: auto;
+}
+
+.gundem-content-footer-container {
+    display: flex;
+    background: rgb(255, 247, 247);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    transition: background 0.25s;
+    cursor: pointer;
+}
+
+.gundem-content-footer-container:hover {
+    background: rgb(252, 237, 237);
+}
+
+.gundem-content-footer-container > span {
+    margin-left: 0.75em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: rgb(153, 153, 253);
+    padding: 0.25rem 0 0.25rem 0.1rem;
+}
+
+.right-area-item:nth-child(2) {
+    margin-top: 20px;
+}
+
+.takip-content-header-container {
+    display: flex;
+    flex-direction: row;
+    background: rgb(255, 247, 247);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom: 1px solid rgb(252, 218, 218);
+}
+
+.takip-content-header-container:hover {
+    background: rgb(252, 237, 237);
+}
+
+.takip-content-header-item {
+    padding-left: 0.75rem;
+    font-size: 1.2rem;
+}
+
+.takip-content-body-container {
+    display: flex;
+    flex-direction: row;
+    background: rgb(255, 247, 247);
+    border-bottom: 1px solid rgb(252, 218, 218);
+    cursor: pointer;
+}
+
+.takip-content-body-container:hover {
+    background: rgb(252, 237, 237);
+}
+
+.takip-content-body-item {
+    padding-left: 0.75rem;
+}
+
+.takip-content-body-text-container {
+    display: flex;
+    flex-direction: column;
+}
+.takip-content-body-text-container:hover > span:first-child{
+    text-decoration: underline;
+}
+
+.takip-content-body-text-item:last-child {
+    font-family: "Lato", sans-serif;
+}
+
+.takip-content-body-item:last-child {
+    margin-left: auto;
+    padding: 0.25rem 0.5rem 0 0.5rem;
+}
+
+.takip-content-body-item:last-child button {
+    border: none;
+    border: 1px solid rgb(135, 135, 248);
+    border-radius: 1rem;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+    background: transparent;
+    color: rgb(135, 135, 248);
+    font-size: 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    transition: background 0.25s;
+    cursor: pointer;
+}
+
+.takip-content-body-item:last-child button:hover {
+    background: rgb(253, 226, 226);
+}
+
+.takip-content-body-item:last-child button:focus {
+    outline: none;
+}
+
+.takip-content-body-item img {
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    border: none;
+}
+
+.takip-content-footer-container {
+    display: flex;
+    background: rgb(255, 247, 247);
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    cursor: pointer;
+}
+
+.takip-content-footer-container:hover {
+    background: rgb(252, 237, 237);
+}
+
+.takip-content-footer-item {
+    padding: 0.5rem 0 0.5rem 1rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    color: rgb(153, 153, 253);
+}
+
+.right-links-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: "Lato", sans-serif;
+    font-size: 0.8rem;
+    color: rgb(167, 137, 137);
+}
+
+.right-links-item{
+    padding-right: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.right-links-item:hover:not(:last-child){
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.right-area-image-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.right-area-image-item{
+    margin-right: 0.2rem;
+}
+
+.right-area-image-container img {
+    width: 6.6rem;
+    height: 6.6rem;
+    cursor: pointer;
+}
+.right-area-image-item:first-child img {
+    border-top-left-radius: 1rem;
+}
+
+.right-area-image-item:nth-child(3) img {
+    border-top-right-radius: 1rem;
+}
+
+.right-area-image-item:nth-child(4) img {
+    border-bottom-left-radius: 1rem;
+}
+
+.right-area-image-item:nth-child(6) img {
+    border-bottom-right-radius: 1rem;
+}
